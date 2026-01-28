@@ -288,25 +288,6 @@
                     </div>
                 </div>
 
-                <!-- Bottom Illustration -->
-                <div class="flex-none mt-8 relative h-48 w-full flex items-end justify-center overflow-visible">
-                    <div class="absolute bottom-[-50px] left-1/2 transform -translate-x-1/2 w-64 h-64 bg-gradient-to-t from-primary/10 to-transparent rounded-full blur-2xl"></div>
-                    <div class="relative w-full h-full">
-                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-40 h-32 bg-white rounded-t-2xl shadow-xl border border-slate-100 z-20 flex flex-col items-center justify-center p-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                                <span class="material-symbols-outlined text-primary text-2xl">description</span>
-                            </div>
-                            <div class="w-20 h-2 bg-slate-100 rounded-full mb-2"></div>
-                            <div class="w-16 h-2 bg-slate-100 rounded-full"></div>
-                        </div>
-                        <div class="absolute bottom-20 left-[25%] bg-white p-2 rounded-lg shadow-lg rotate-[-12deg] z-10 animate-bounce" style="animation-duration: 3s;">
-                            <span class="material-symbols-outlined text-odido-magenta text-xl">auto_awesome</span>
-                        </div>
-                        <div class="absolute bottom-24 right-[25%] bg-white p-2 rounded-lg shadow-lg rotate-[12deg] z-10 animate-bounce" style="animation-duration: 4s; animation-delay: 1s;">
-                            <span class="material-symbols-outlined text-primary text-xl">magic_button</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -381,10 +362,10 @@
                 <div class="px-5 pb-4">
                     <div class="flex items-center justify-between mb-3">
                         <h3 class="text-odido-black text-sm font-bold">Recente documenten</h3>
-                        <button class="text-primary text-xs font-semibold">Alles zien</button>
+                        <button onclick="showScreen('screen-export-list')" class="text-primary text-xs font-semibold">Alles zien</button>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <div onclick="showScreen('screen-preview')" class="group clickable">
+                        <div onclick="showScreen('screen-document-view')" class="group clickable">
                             <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 transition hover:border-primary/30 hover:shadow-md">
                                 <div class="flex items-center justify-center rounded-lg bg-red-50 text-red-600 size-10">
                                     <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
@@ -397,7 +378,7 @@
                             </div>
                         </div>
 
-                        <div onclick="showScreen('screen-preview')" class="group clickable">
+                        <div onclick="showScreen('screen-document-view')" class="group clickable">
                             <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 transition hover:border-primary/30 hover:shadow-md">
                                 <div class="flex items-center justify-center rounded-lg bg-blue-50 text-blue-600 size-10">
                                     <span class="material-symbols-outlined text-xl">description</span>
@@ -410,7 +391,7 @@
                             </div>
                         </div>
 
-                        <div onclick="showScreen('screen-preview')" class="group clickable">
+                        <div onclick="showScreen('screen-document-view')" class="group clickable">
                             <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 transition hover:border-primary/30 hover:shadow-md">
                                 <div class="flex items-center justify-center rounded-lg bg-green-50 text-green-600 size-10">
                                     <span class="material-symbols-outlined text-xl">slideshow</span>
@@ -1657,7 +1638,6 @@
                         <div class="absolute h-44 w-44 animate-pulse rounded-full bg-white/5" style="animation-delay: 0.5s;"></div>
                         <div class="relative flex h-24 w-24 items-center justify-center rounded-2xl bg-white/20 shadow-xl backdrop-blur-md border border-white/30">
                             <span class="material-symbols-outlined text-[48px] text-white" style="font-variation-settings: 'FILL' 1;">auto_awesome_motion</span>
-                            <span class="material-symbols-outlined absolute -right-3 -top-3 animate-bounce text-yellow-300 drop-shadow-lg" style="font-size: 24px; animation-duration: 2s;">spark</span>
                         </div>
                     </div>
 
@@ -2659,7 +2639,7 @@
                     <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Vandaag</h3>
                     <div class="flex flex-col gap-2">
                         <!-- Export Item 1 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
                                 <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
                             </div>
@@ -2673,13 +2653,11 @@
                             </div>
                             <div class="flex items-center gap-1">
                                 <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
-                                <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                    <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                                </button>
+                                <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                             </div>
                         </div>
                         <!-- Export Item 2 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-[#00aeef]/10 flex items-center justify-center text-[#00aeef]">
                                 <span class="material-symbols-outlined text-2xl">cloud_done</span>
                             </div>
@@ -2693,9 +2671,7 @@
                             </div>
                             <div class="flex items-center gap-1">
                                 <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
-                                <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                    <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                                </button>
+                                <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                             </div>
                         </div>
                     </div>
@@ -2706,7 +2682,7 @@
                     <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Gisteren</h3>
                     <div class="flex flex-col gap-2">
                         <!-- Export Item 3 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-500">
                                 <span class="material-symbols-outlined text-2xl">co_present</span>
                             </div>
@@ -2718,12 +2694,10 @@
                                     <span class="text-[10px] text-gray-400">Gisteren 16:42</span>
                                 </div>
                             </div>
-                            <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                            </button>
+                            <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                         </div>
                         <!-- Export Item 4 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
                                 <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
                             </div>
@@ -2735,9 +2709,7 @@
                                     <span class="text-[10px] text-gray-400">Gisteren 14:20</span>
                                 </div>
                             </div>
-                            <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                            </button>
+                            <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                         </div>
                     </div>
                 </div>
@@ -2747,7 +2719,7 @@
                     <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Vorige week</h3>
                     <div class="flex flex-col gap-2">
                         <!-- Export Item 5 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-purple-50 flex items-center justify-center text-purple-500">
                                 <span class="material-symbols-outlined text-2xl">code</span>
                             </div>
@@ -2759,12 +2731,10 @@
                                     <span class="text-[10px] text-gray-400">ma 21 okt</span>
                                 </div>
                             </div>
-                            <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                            </button>
+                            <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                         </div>
                         <!-- Export Item 6 -->
-                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                        <div onclick="showScreen('screen-document-view')" class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-primary/30 hover:shadow-md transition-all">
                             <div class="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
                                 <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
                             </div>
@@ -2776,9 +2746,7 @@
                                     <span class="text-[10px] text-gray-400">zo 20 okt</span>
                                 </div>
                             </div>
-                            <button class="flex items-center justify-center h-8 w-8 rounded-full hover:bg-gray-100">
-                                <span class="material-symbols-outlined text-gray-400 text-xl">more_vert</span>
-                            </button>
+                            <span class="material-symbols-outlined text-gray-300 text-xl">chevron_right</span>
                         </div>
                     </div>
                 </div>
@@ -3024,6 +2992,213 @@
                     <div class="absolute -top-[1px] h-[2px] w-8 bg-primary rounded-b-full"></div>
                     <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">settings</span>
                     <span class="text-[10px] font-bold">Instellingen</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ==================== SCREEN 15: DOCUMENT VIEW ==================== -->
+        <div id="screen-document-view" class="screen flex-col overflow-hidden">
+            <!-- Top App Bar -->
+            <div class="sticky top-0 z-30 flex items-center bg-white p-4 pb-2 justify-between border-b border-gray-100">
+                <button onclick="showScreen('screen-home')" class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">arrow_back_ios_new</span>
+                </button>
+                <h2 class="text-lg font-bold flex-1 text-center">Document</h2>
+                <button class="flex items-center justify-center rounded-full h-10 w-10 hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">more_vert</span>
+                </button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 overflow-y-auto pb-28 no-scrollbar">
+                <!-- Document Info Card -->
+                <div class="p-4">
+                    <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary text-3xl">slideshow</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-lg truncate">Q3 Social Campaign</p>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-xs text-gray-500">12 slides</span>
+                                <span class="text-xs text-gray-300">•</span>
+                                <span class="text-xs text-gray-500">4.2 MB</span>
+                            </div>
+                            <div class="flex items-center gap-2 mt-1">
+                                <div class="h-5 w-5 rounded-full bg-primary flex items-center justify-center text-white text-[8px] font-bold">JP</div>
+                                <span class="text-xs text-gray-400">2 uur geleden gegenereerd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slides Preview Section -->
+                <div class="px-4 pb-4">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3 px-1">Slides Preview</h3>
+                    <div class="flex flex-col gap-3">
+                        <!-- Slide 1 -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                            <div class="flex items-center justify-between px-3 py-2 bg-gray-50 border-b border-gray-100">
+                                <span class="text-[10px] font-bold text-gray-400 uppercase">Slide 1 • Titel</span>
+                            </div>
+                            <div class="aspect-[16/9] bg-gradient-to-br from-primary via-primary to-purple-600 p-3 flex flex-col justify-between relative overflow-hidden">
+                                <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <circle cx="80" cy="20" r="30" fill="white"/>
+                                </svg>
+                                <img src="https://www.odido.nl/Assets/Lfwd/Static/odido-logo.svg" alt="Odido" class="h-3 brightness-0 invert relative z-10">
+                                <div class="relative z-10">
+                                    <h4 class="text-white text-base font-bold">Q3 Social Campaign</h4>
+                                    <p class="text-white/60 text-[10px]">Marketing • Oktober 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                            <div class="flex items-center justify-between px-3 py-2 bg-gray-50 border-b border-gray-100">
+                                <span class="text-[10px] font-bold text-gray-400 uppercase">Slide 2 • Agenda</span>
+                            </div>
+                            <div class="aspect-[16/9] bg-white p-3">
+                                <p class="text-xs font-bold text-odido-black mb-2">Agenda vandaag</p>
+                                <div class="flex flex-col gap-1.5">
+                                    <div class="flex items-center gap-2 bg-primary/5 rounded p-1.5">
+                                        <div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-[8px] font-bold text-white">1</div>
+                                        <span class="text-[9px] font-medium">Marktoverzicht</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-gray-50 rounded p-1.5">
+                                        <div class="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-[8px] font-bold text-primary">2</div>
+                                        <span class="text-[9px] text-gray-600">Campagne strategie</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 bg-gray-50 rounded p-1.5">
+                                        <div class="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-[8px] font-bold text-primary">3</div>
+                                        <span class="text-[9px] text-gray-600">Resultaten & KPIs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                            <div class="flex items-center justify-between px-3 py-2 bg-gray-50 border-b border-gray-100">
+                                <span class="text-[10px] font-bold text-gray-400 uppercase">Slide 3 • Resultaten</span>
+                            </div>
+                            <div class="aspect-[16/9] bg-white p-3">
+                                <p class="text-xs font-bold text-odido-black mb-2">Q3 Resultaten</p>
+                                <div class="flex items-end gap-2 h-[50%] px-1">
+                                    <div class="flex flex-col items-center flex-1 gap-0.5">
+                                        <div class="w-full bg-primary/30 rounded-t" style="height: 40%"></div>
+                                        <span class="text-[7px] text-gray-400">Jul</span>
+                                    </div>
+                                    <div class="flex flex-col items-center flex-1 gap-0.5">
+                                        <div class="w-full bg-primary/50 rounded-t" style="height: 65%"></div>
+                                        <span class="text-[7px] text-gray-400">Aug</span>
+                                    </div>
+                                    <div class="flex flex-col items-center flex-1 gap-0.5">
+                                        <div class="w-full bg-primary rounded-t" style="height: 90%"></div>
+                                        <span class="text-[7px] text-gray-400">Sep</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More slides indicator -->
+                        <div class="text-center py-2">
+                            <p class="text-xs text-gray-400">+ 9 meer slides</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Options -->
+                <div class="px-4 pb-4">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3 px-1">Exporteer als</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow active:scale-[0.98]">
+                            <div class="h-10 w-10 rounded-full bg-red-50 flex items-center justify-center text-red-500">
+                                <span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+                            </div>
+                            <span class="font-semibold text-xs">PDF</span>
+                        </button>
+                        <button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-[#00aeef] text-white shadow-sm hover:shadow-md transition-shadow active:scale-[0.98]">
+                            <div class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xl">cloud_upload</span>
+                            </div>
+                            <span class="font-semibold text-xs">Bynder</span>
+                        </button>
+                        <button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-[#8e44ad] text-white shadow-sm hover:shadow-md transition-shadow active:scale-[0.98]">
+                            <div class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-xl">code</span>
+                            </div>
+                            <span class="font-semibold text-xs">HTML</span>
+                        </button>
+                        <button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow active:scale-[0.98]">
+                            <div class="h-10 w-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                                <span class="material-symbols-outlined text-xl">co_present</span>
+                            </div>
+                            <span class="font-semibold text-xs">PowerPoint</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Share Section -->
+                <div class="px-4 pb-4">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3 px-1">Delen met collega's</h3>
+                    <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                        <button class="flex flex-col items-center gap-2 min-w-[64px] py-2 px-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+                            <div class="h-9 w-9 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </div>
+                            <span class="font-medium text-[10px] text-odido-black">E-mail</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 min-w-[64px] py-2 px-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+                            <div class="h-9 w-9 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+                                <span class="material-symbols-outlined text-lg">tag</span>
+                            </div>
+                            <span class="font-medium text-[10px] text-odido-black">Slack</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 min-w-[64px] py-2 px-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+                            <div class="h-9 w-9 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
+                                <span class="material-symbols-outlined text-lg">groups</span>
+                            </div>
+                            <span class="font-medium text-[10px] text-odido-black">Teams</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 min-w-[64px] py-2 px-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+                            <div class="h-9 w-9 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                                <span class="material-symbols-outlined text-lg">chat</span>
+                            </div>
+                            <span class="font-medium text-[10px] text-odido-black">WhatsApp</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 min-w-[64px] py-2 px-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+                            <div class="h-9 w-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
+                                <span class="material-symbols-outlined text-lg">link</span>
+                            </div>
+                            <span class="font-medium text-[10px] text-odido-black">Link</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Edit Button -->
+                <div class="px-4 pb-6">
+                    <button class="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-primary bg-primary/5 py-3.5 text-primary font-bold text-base hover:bg-primary/10 transition-colors active:scale-[0.98]">
+                        <span class="material-symbols-outlined text-xl">edit</span>
+                        Document wijzigen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto h-[80px] bg-white border-t border-gray-100 flex justify-around items-center px-2 z-30 pb-4">
+                <button onclick="showScreen('screen-home')" class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-gray-600 transition-colors w-16">
+                    <span class="material-symbols-outlined text-[24px]">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </button>
+                <button onclick="showScreen('screen-templates')" class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-gray-600 transition-colors w-16">
+                    <span class="material-symbols-outlined text-[24px]">grid_view</span>
+                    <span class="text-[10px] font-medium">Templates</span>
+                </button>
+                <button onclick="showScreen('screen-export-list')" class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-gray-600 transition-colors w-16">
+                    <span class="material-symbols-outlined text-[24px]">folder_open</span>
+                    <span class="text-[10px] font-medium">Exports</span>
+                </button>
+                <button onclick="showScreen('screen-settings')" class="flex flex-col items-center gap-1 p-2 text-gray-400 hover:text-gray-600 transition-colors w-16">
+                    <span class="material-symbols-outlined text-[24px]">settings</span>
+                    <span class="text-[10px] font-medium">Instellingen</span>
                 </button>
             </div>
         </div>
